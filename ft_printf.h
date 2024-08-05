@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
+#ifndef FT_PRINTF_H
 
-# define PRINTF_H
+# define FT_PRINTF_H
 
 # include <string.h>
 # include <stdio.h>
@@ -28,7 +28,7 @@ int		ft_putstr(char *str);
 int		ft_putnbr(int nb);
 int		ft_puthex(unsigned int nb, int upper);
 int		ft_putunbr(unsigned int nb);
-int		ft_putptr(unsigned long long nb);
+int		ft_putptr(void *ptr);
 int		parser(const char format, va_list args);
 
 #endif

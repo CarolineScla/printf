@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char	*format, ...)
 {
 	va_list			args;
 	unsigned int	i;
 
-	if (format == NULL)
+	if (format == 0)
 		return (-1);
 	i = 0;
 	va_start(args, format);

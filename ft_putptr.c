@@ -10,17 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-int	ft_putptr(unsigned long long nb)
+int	ft_putpointer(unsigned long long nb)
 {
 	int	count;
 
 	count = 0;
 	if (nb >= 16)
 	{
-		count += ft_putptr(nb / 16);
-		count += ft_putptr(nb % 16);
+		count += ft_putpointer(nb / 16);
+		count += ft_putpointer(nb % 16);
 	}
 	else
 	{
@@ -29,6 +29,21 @@ int	ft_putptr(unsigned long long nb)
 		else
 			ft_putchar(nb + 87);
 		count++;
+	}
+	return (count);
+}
+
+int	ft_putptr(void *ptr)
+{
+	int	count;
+
+	count = 0;
+	if (ptr == NULL)
+		count += ft_putstr("(nil)");
+	else
+	{
+		count += ft_putstr("0x");
+		count += ft_putpointer((unsigned long long)ptr);
 	}
 	return (count);
 }

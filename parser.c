@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	parser(const char format, va_list args)
 {
@@ -22,9 +22,11 @@ int	parser(const char format, va_list args)
 	else if (format == 's')
 		i += ft_putstr(va_arg(args, char *));
 	else if (format == 'p')
-		i += ft_putptr(va_arg(args, size_t));
+		i += ft_putptr(va_arg(args, void *));
 	else if (format == 'x' || format == 'X')
 		i += ft_puthex(va_arg(args, unsigned int), format);
+	else if (format == 'c')
+		i += ft_putchar(va_arg(args, int));
 	else if (format == '%')
 	{
 		ft_putchar('%');

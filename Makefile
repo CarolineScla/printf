@@ -12,7 +12,7 @@
 
 NAME = libftprintf.a
 
-FILE =  printf.c \
+FILE =  ft_printf.c \
 		parser.c \
 		ft_strchr.c \
 		ft_putchar.c \
