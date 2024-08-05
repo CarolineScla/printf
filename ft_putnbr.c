@@ -28,6 +28,7 @@ int	ft_putnbr(int nb)
 	{
 		ft_putchar('-');
 		nb = -nb;
+		count++;
 	}
 	if (nb >= 10)
 	{
@@ -35,7 +36,9 @@ int	ft_putnbr(int nb)
 		count += ft_putnbr(nb % 10);
 	}
 	else
-		ft_putchar(nb + 48);
-	count++;
+	{
+		ft_putchar(nb + '0');
+		count++;
+	}
 	return (count);
 }

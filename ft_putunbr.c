@@ -12,18 +12,32 @@
 
 #include "ft_printf.h"
 
-int	ft_putunbr(unsigned int num)
+static	int	ft_printunbr(unsigned int num)
 {
 	int	count;
 
 	count = 0;
 	if (num >= 10)
 	{
-		ft_putunbr(num / 10);
-		ft_putunbr(num % 10);
+		ft_printunbr(num / 10);
+		ft_printunbr(num % 10);
 		count++;
 	}
 	else
 		ft_putchar(num + 48);
 	return (count);
+}
+
+int	ft_putunbr(unsigned int nb)
+{
+	unsigned int	i;
+
+	ft_printunbr(nb);
+	i = 0;
+	while (nb >= 10)
+	{
+		nb /= 10;
+		i++;
+	}
+	return (i + 1);
 }

@@ -21,6 +21,8 @@ int	parser(const char format, va_list args)
 		i += ft_putnbr(va_arg(args, int));
 	else if (format == 's')
 		i += ft_putstr(va_arg(args, char *));
+	else if (format == 'u')
+		i += ft_putunbr(va_arg(args, unsigned int));
 	else if (format == 'p')
 		i += ft_putptr(va_arg(args, void *));
 	else if (format == 'x' || format == 'X')
