@@ -38,15 +38,16 @@ int	ft_printf(const char	*format, ...)
 	va_end(args);
 	return (i);
 }
-/*
+
 int	main(void) 
 {
 	int a = 9;
 	
     ft_printf("Caractère: %c\n", 'A'); 
 	printf("printf Caractère: %c\n", 'A'); 
-    ft_printf("Chaîne: %s\n", "Oh Yeeeaaaa"); 
-	printf("printf Chaîne: %s\n", "Oh Yeeeaaaa"); 
+	ft_printf("Chaîne: %s\n", "Oh Yeeeaaaa");
+    ft_printf("%s\n", NULL);
+	printf("Chaîne: %s\n", "Oh Yeeeaaaa"); //ne compile pas si NULL
     ft_printf("Pointeur: %p\n", &a); 
     printf("printf Pointeur: %p\n", &a); 
     ft_printf("Décimal: %d\n", 123); 
@@ -65,4 +66,4 @@ int	main(void)
     printf("printf Pourcentage: %%\n");
 
 	return 0;
-}*/
+}
