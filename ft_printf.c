@@ -38,7 +38,7 @@ int	ft_printf(const char	*format, ...)
 	va_end(args);
 	return (i);
 }
-
+/*
 int	main(void) 
 {
 	int a = 9;
@@ -66,4 +66,4 @@ int	main(void)
     printf("printf Pourcentage: %%\n");
 
 	return 0;
-}
+}*/
